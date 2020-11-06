@@ -11,12 +11,11 @@ export const TwitterProvider = ({children}) => {
     const avatarSrc= avatar;
     const isRetweetedByCurrentUser=false;
     const isLikedByCurrentUser=false;
-
-    const date = new Date();
+    const date = moment().format('MMMM Do YYYY, h:mm:ss a');
 
     return <TwitterContext.Provider 
         value={{tweetContents, 
-                displayName, 
+                displayName,      
                 username,
                 avatarSrc,
                 isRetweetedByCurrentUser,
