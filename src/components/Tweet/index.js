@@ -1,17 +1,18 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-
+import {useTwitter} from "../TwitterContext"
 import Header from "./Header";
 import ActionBar from "./ActionBar";
 
-const Tweet = ({
-  displayName,
+const Tweet = () => {
+  const {displayName,
   username,
   avatarSrc,
   tweetContents,
   isRetweetedByCurrentUser,
   isLikedByCurrentUser,
-}) => {
+  date} = useTwitter()
+
   return (
     <Wrapper>
       <Header

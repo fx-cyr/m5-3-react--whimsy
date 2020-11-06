@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 
 import UnstyledButton from '../UnstyledButton';
 
 const Action = ({ color, size, children, onClick }) => {
-  const [isHovered, setIsHovered] = React.useState(false);
-
+  const [isHovered, setIsHovered] = useState(false);
+  
   return (
     <Wrapper
       onClick={onClick}

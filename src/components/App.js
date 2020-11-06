@@ -1,22 +1,22 @@
-import React from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
-
+// import {avatar} from "../assets/carmen-sandiego.png";
+import {TwitterProvider} from "./TwitterContext"
 import Tweet from "./Tweet";
-
-import avatar from "../assets/carmen-sandiego.png";
-
 const App = () => {
   return (
+<TwitterProvider>
     <Wrapper>
       <Tweet
-        tweetContents="Where in the world am I?"
-        displayName="Carmen Sandiego ✨"
-        username="carmen-sandiego"
-        avatarSrc={avatar}
-        isRetweetedByCurrentUser={false}
-        isLikedByCurrentUser={false}
+        // tweetContents="Where in the world am I?"
+        // displayName="Carmen Sandiego ✨"
+        // username="carmen-sandiego"
+        // avatarSrc={avatar}
+        // isRetweetedByCurrentUser={false}
+        // isLikedByCurrentUser={false}
       />
     </Wrapper>
+    </TwitterProvider>
   );
 };
 
