@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import {useTwitter} from "../TwitterContext"
 
-const Header = ({ displayName, username, avatarSrc }) => {
+const Header = () => {
+  const { displayName, username, avatarSrc } = useTwitter()
   return (
     <Wrapper>
       <Avatar src={avatarSrc} />
@@ -14,8 +16,7 @@ const Header = ({ displayName, username, avatarSrc }) => {
 };
 
 const Wrapper = styled.header`
-  display: flex;
-`;
+  display: flex;`;
 
 const Avatar = styled.img`
   width: 48px;
