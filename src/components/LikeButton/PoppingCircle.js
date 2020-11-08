@@ -30,7 +30,9 @@ to {
 
 const Wrapper = styled.div`
 border-radius:50%;
-position: absolute;
+position:absolute;
+left:-8px;
+top:-8px;
 animation: ${fadeIn} 700ms forwards, ${scale} 400ms forwards;
 `
 
