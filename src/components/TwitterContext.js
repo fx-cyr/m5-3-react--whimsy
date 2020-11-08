@@ -17,11 +17,31 @@ export const TwitterProvider = ({children}) => {
     const isRetweetedByCurrentUser = isRetweeted;
     const isLikedByCurrentUser = isLiked;
 
-    const handleLikeBtn = () => {
-        if (isLiked){
-            setNumOfLikes(numOfLikes + 1)
-            setIsLiked(!isLiked) }
-}
+    const handleToggleLike = () => {
+        if (!isLiked) {
+        setIsLiked(true)
+        setNumOfLikes(numOfLikes + 1)
+        console.log("+1")
+    }
+    else {
+        setIsLiked(false)
+        setNumOfLikes(numOfLikes - 1)
+        console.log("-1")
+    }
+    }
+
+    const handleToggleRetweet = () => {
+        if (!isRetweeted) {
+        setIsRetweeted(true)
+        setNumOfRetweets(numOfRetweets + 1)
+        console.log("+1")
+    }
+    else {
+        setIsRetweeted(false)
+        setNumOfRetweets(numOfRetweets - 1)
+        console.log("-1")
+    }
+    }
     
 
     return <TwitterContext.Provider 
@@ -33,7 +53,8 @@ export const TwitterProvider = ({children}) => {
                 isLikedByCurrentUser,
                 date,
                 numOfLikes, setNumOfLikes,
-                numOfRetweets, setNumOfRetweets}}>
+                numOfRetweets, setNumOfRetweets,
+                handleToggleLike, handleToggleRetweet}}>
                     {children}
         </TwitterContext.Provider>
 }
