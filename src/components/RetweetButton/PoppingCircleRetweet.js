@@ -1,7 +1,7 @@
 import React from "react"
 import styled, {keyframes} from "styled-components"
 
-const PoppingCircle = ({size, color}) => {
+const PoppingCircleRetweet = ({size, color}) => {
 
     return (
     <Wrapper style={{width:size, height:size, background:color}} >
@@ -35,4 +35,4 @@ top:-8px;
 animation: ${fadeIn} 700ms forwards, ${scale} 400ms forwards;
 `
 
-export default PoppingCircle;
+export default PoppingCircleRetweet;

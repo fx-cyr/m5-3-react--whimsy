@@ -13,14 +13,7 @@ const LikeButton = ({ size = 40 }) => {
   const heartSize = size * 0.6;
 
   return (
-    // <Wrapper style={{ width: size, height: size }}>
-    //   {isLikedByCurrentUser && (<PoppingCircle size={size} color="#E790F7" /> )}
-
-    //   {isLikedByCurrentUser ? <ScaleIn>
-    //     <Heart width={heartSize} isToggled={isLikedByCurrentUser}  onClick/>
-    //   </ScaleIn> : <Heart width={heartSize} isToggled={isLikedByCurrentUser}  onClick/>}
-      
-    // </Wrapper>
+   
     <Wrapper style={{ width: size, height: size }}>
     {isLikedByCurrentUser ? (
     <ScaleIn >

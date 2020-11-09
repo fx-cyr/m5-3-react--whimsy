@@ -1,7 +1,7 @@
 import React from "react"
 import {useSpring, animated} from "react-spring"
 
-export const ScaleIn = ({children}) => {
+export const ScaleInRetweet = ({children}) => {
     const style = useSpring({
       transform: "scale(1)",
       from: {
@@ -9,8 +9,7 @@ export const ScaleIn = ({children}) => {
       },
       config: {
         tension: 150,
-        friction: 13,
-      },
+        friction: 13,      },
     });
   
     return (
